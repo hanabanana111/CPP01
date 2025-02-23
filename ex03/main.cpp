@@ -1,23 +1,37 @@
-#include"./Weapon.hpp"
 #include"./HumanA.hpp"
 #include"./HumanB.hpp"
 
 int main()
 {
-{
-Weapon club = Weapon("crude spiked club");
-HumanA bob("Bob", club);
-bob.attack();
-club.setType("some other type of club");
-bob.attack();
-}
-{
-Weapon club = Weapon("crude spiked club");
-HumanB jim("Jim");
-jim.setWeapon(club);
-jim.attack();
-club.setType("some other type of club");
-jim.attack();
-}
-return 0;
+    {
+        Weapon pokemon = Weapon("Kodak Amnesia");
+        HumanA Yosshii("Yosshii", pokemon);
+        Yosshii.attack();
+        pokemon.setType("Pippi Metronome");
+        Yosshii.attack();
+    }
+    {
+        Weapon pokemon = Weapon("Kodak Amnesia");
+        HumanB Hana("Hana");
+        Hana.setWeapon(pokemon);
+        Hana.attack();
+        pokemon.setType("Pippi Metronome");
+        Hana.attack();
+    }
+    std::cout << std::endl;
+    {
+        Weapon pokemon = Weapon("Kodak Amnesia");
+        HumanA Yosshii("Yosshii", pokemon);
+        Yosshii.attack();
+        HumanB Hana("Hana");
+        Hana.setWeapon(pokemon);
+        Hana.attack();
+        pokemon.setType("Pippi Metronome");
+        Yosshii.attack();
+        Hana.attack();
+        pokemon.setType("Magikarp Splash");
+        Yosshii.attack();
+        Hana.attack();
+    }
+    return 0;
 }
