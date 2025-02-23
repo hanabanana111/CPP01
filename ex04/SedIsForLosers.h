@@ -5,6 +5,6 @@
 #include<iostream>
 #include<string>
 #include"replace.hpp"
-#include"fileInfo.hpp"
+#include"inputFile.hpp"
 
 #endif
