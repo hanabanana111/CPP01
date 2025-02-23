@@ -1,7 +1,7 @@
 CPP = c++
 CPP_FLAGS = -Wall -Werror -Wextra -std=c++98
 
-PROGRAM_NAME = Sed_is_for_losers
+PROGRAM_NAME = SedIsForLosers
 SRCDIR := ./
 INCDIR := ./
 
