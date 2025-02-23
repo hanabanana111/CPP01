@@ -4,5 +4,7 @@
 #include<fstream>
 #include<iostream>
 #include<string>
+#include"replace.hpp"
+#include"fileInfo.hpp"
 
 #endif
