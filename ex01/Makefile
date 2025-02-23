@@ -1,7 +1,7 @@
 CPP = c++
 CPP_FLAGS = -Wall -Werror -Wextra -std=c++98
 
-PROGRAM_NAME = Moar_brainz!
+PROGRAM_NAME = MoarBrainz!
 SRCDIR := ./
 INCDIR := ./
 
@@ -14,8 +14,8 @@ OBJS := $(SRC:$(SRCDIR)/%.cpp=$(OBJDIR)/%.o)
 
 all: $(PROGRAM_NAME)
 
-$(PROGRAM_NAME): $(OBJS)
-	$(CPP) $(CPP_FLAGS) $(INCLUDES) -o $@ $^
+$(PROGRAM_NAME): $(OBJS) $(wildcard $(INCDIR)/*.hpp) 
+	$(CPP) $(CPP_FLAGS) $(INCLUDES) -o $@ $(OBJS)
 
 $(OBJDIR):
 	@mkdir -p $(OBJDIR)

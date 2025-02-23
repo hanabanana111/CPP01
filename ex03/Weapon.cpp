@@ -13,3 +13,6 @@ void Weapon::setType(const std::string &new_type)
 {
     this->type_ = new_type;
 }
+
+Weapon::~Weapon()
+{}

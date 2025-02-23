@@ -1,7 +1,7 @@
 CPP = c++
 CPP_FLAGS = -Wall -Werror -Wextra -std=c++98
 
-PROGRAM_NAME = Unnecessary_violence
+PROGRAM_NAME = UnnecessaryViolence
 SRCDIR := ./
 INCDIR := ./
 
