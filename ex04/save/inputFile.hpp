@@ -9,9 +9,9 @@ class InputFile
         InputFile();
         ~InputFile();
         bool setInputFile(const std::string &input_file_path);
-        std::ofstream getInputFile() const;
+        std::ifstream getInputFile();
     private:
-        std::ofstream input_file_;
+        std::ifstream input_file_;
 };
 
 #endif

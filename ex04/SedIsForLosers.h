@@ -5,6 +5,5 @@
 #include<iostream>
 #include<string>
 #include"replace.hpp"
-#include"inputFile.hpp"
 
 #endif

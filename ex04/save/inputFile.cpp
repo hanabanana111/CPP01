@@ -11,10 +11,15 @@ bool InputFile::setInputFile(const std::string &input_file_path)
         std::cerr << "Error Opening file" << std::endl;
         return false;
     }
+    return true;
 }
 
-std::ofstream InputFile::getInputFile() const
-{}
+std::ifstream InputFile::getInputFile()
+{
+    return this->input_file_;
+}
 
 InputFile::~InputFile()
-{}
+{
+    this->getInputFile().close();
+}
