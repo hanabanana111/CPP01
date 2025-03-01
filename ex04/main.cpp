@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
     std::string argv2 = argv[2];
     std::string argv3 = argv[3];
 
-    if(argc != 4)
+    if(argc != 4 || argv[1][0] == '\0' || argv[2][0] == '\0')
         return (printError("Arguments error"));
     if(inputFile.fail())
         return (printError("Input file open error"));
