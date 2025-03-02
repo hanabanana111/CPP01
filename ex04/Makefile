@@ -27,7 +27,7 @@ clean:
 	rm -rf $(OBJDIR)
 
 fclean: clean
-	rm -f $(PROGRAM_NAME)
+	rm -f $(PROGRAM_NAME) $(wildcard $(INCDIR)/*.replace)
 
 re: fclean all
 
