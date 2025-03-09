@@ -6,6 +6,8 @@
 #include<string.h>
 #include <cstdlib>
 #include <cerrno>
+#include <sstream> 
+#include <limits>
 
 class Zombie
 {
@@ -21,8 +23,8 @@ class Zombie
 
 Zombie* zombieHorde( int N, std::string name );
 void setZombiesName(std::string& name, const std::string& message);
-void setZombiesNumber(std::string& in_n, const std::string& message);
-bool isStringDigits(std::string& str);
+void setZombiesNumber(std::string& in_n_str, long& in_n, const std::string& message);
+bool isStringDigits(const std::string& str);
 void printErrorExit(std::string& str);
 
 #endif
