@@ -1,4 +1,4 @@
-#include"SedIsForLosers.h"
+#include"main.hpp"
 
 int printError(const char *str)
 {
