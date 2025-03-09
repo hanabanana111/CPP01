@@ -23,12 +23,12 @@ int main(int argc, char *argv[])
 {
     std::string line;
     Replace replace;
-    std::ifstream inputFile(argv[1]);
-    std::string argv2 = argv[2];
-    std::string argv3 = argv[3];
 
     if(argc != 4 || argv[1][0] == '\0' || argv[2][0] == '\0')
         return (printError("Arguments error"));
+    std::ifstream inputFile(argv[1]);
+    std::string argv2 = argv[2];
+    std::string argv3 = argv[3];
     if(inputFile.fail())
         return (printError("Input file open error"));
     std::ofstream outputFile(setOutputFileName(argv[1]).c_str());

@@ -14,7 +14,7 @@ void HumanB::setWeaponName(const std::string new_weapon_type)
             break;
         this->weapon_type_ += new_weapon_type[i];
     }
-    std::cout << this->name_ << " sent ont " << weapon_type_ << std::endl;
+    std::cout << this->name_ << " sent out " << weapon_type_ << std::endl;
 }
 
 std::string HumanB::getWeaponName() const

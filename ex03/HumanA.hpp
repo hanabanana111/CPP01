@@ -14,7 +14,7 @@ class HumanA
         std::string getWeaponName() const;
         std::string name_;
         std::string weapon_type_;
-        Weapon *weapon_;
+        Weapon &weapon_;
 };
 
 #endif

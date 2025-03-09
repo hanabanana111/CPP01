@@ -1,7 +1,7 @@
 #include"./HumanA.hpp"
 
 HumanA::HumanA(const std::string &new_name, Weapon& new_weapon):
-name_(new_name), weapon_type_(""), weapon_(&new_weapon)
+name_(new_name), weapon_type_(""), weapon_(new_weapon)
 {}
 
 void HumanA::setWeaponName(const std::string new_weapon_type)
@@ -15,7 +15,7 @@ void HumanA::setWeaponName(const std::string new_weapon_type)
             break;
         this->weapon_type_ += new_weapon_type[i];
     }
-    std::cout << this->name_ << " sent ont " << weapon_type_ << std::endl;
+    std::cout << this->name_ << " sent out " << weapon_type_ << std::endl;
 }
 
 std::string HumanA::getWeaponName() const
@@ -25,11 +25,9 @@ std::string HumanA::getWeaponName() const
 
 void HumanA::attack()
 {
-    if (this->weapon_ == NULL)
-        return;
-    if(this->weapon_type_.compare(this->weapon_->getType()))
-        setWeaponName(this->weapon_->getType());
-    std::string type = this->weapon_->getType();
+    if(this->weapon_type_.compare(this->weapon_.getType()))
+        setWeaponName(this->weapon_.getType());
+    std::string type = this->weapon_.getType();
     std::cout << this->name_ << " attacks with their " << type << std::endl;
     if(type == "Magikarp Splash")
         std::cout << "No effect!" << std::endl;
