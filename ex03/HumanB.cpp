@@ -39,16 +39,6 @@ void HumanB::setWeapon(Weapon &new_weapon)
     this->weapon_ = &new_weapon;
 }
 
-// void HumanB::attack() const
-// {
-//     if (this->weapon_ == NULL)
-//         return;
-//     std::string type = this->weapon_->getType();
-//     std::cout << this->name_ << " attacks with their " << type << std::endl;
-//     if(type == "Magikarp Splash")
-//         std::cout << "No effect!" << std::endl;
-// }
-
 HumanB::~HumanB()
 {
     std::cout << this->name_ << " Got away safety!" << std::endl;

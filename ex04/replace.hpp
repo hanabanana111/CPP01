@@ -8,10 +8,10 @@ class Replace
     public:
         Replace();
         ~Replace();
-        void setNewLine(const std::string &line, std::string &s1, std::string &s2);
-        std::string getNewLine() const;
+        void setNewFile(const std::string &pre_file, std::string &s1, std::string &s2);
+        std::string getNewFile() const;
     private:
-        std::string new_line_;
+        std::string new_file_;
 };
 
 #endif

@@ -1,29 +1,29 @@
 #include"replace.hpp"
 
 Replace::Replace():
-new_line_("")
+new_file_("")
 {}
 
-void Replace::setNewLine(const std::string &line, std::string &s1, std::string &s2)
+void Replace::setNewFile(const std::string &pre_file, std::string &s1, std::string &s2)
 {
-    this->new_line_ = "";
-    for(unsigned long i = 0; i < line.size(); i++)
+    this->new_file_ = "";
+    for(unsigned long i = 0; i < pre_file.size(); i++)
     {
-        if(!line.compare(i, s1.size(), s1))
+        if(!pre_file.compare(i, s1.size(), s1))
         {
-            this->new_line_ += s2;
+            this->new_file_ += s2;
             i += s1.size() - 1;
         }
         else
         {
-            this->new_line_ += line[i];
+            this->new_file_ += pre_file[i];
         }
     }
 }
 
-std::string Replace::getNewLine() const
+std::string Replace::getNewFile() const
 {
-    return new_line_;
+    return new_file_;
 }
 
 Replace::~Replace()

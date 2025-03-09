@@ -21,7 +21,7 @@ std::string setOutputFileName(char *argv1)
 
 int main(int argc, char *argv[])
 {
-    std::string line;
+    std::string buf;
     Replace replace;
 
     if(argc != 4 || argv[1][0] == '\0' || argv[2][0] == '\0')
@@ -34,11 +34,10 @@ int main(int argc, char *argv[])
     std::ofstream outputFile(setOutputFileName(argv[1]).c_str());
     if(outputFile.fail())
         return (printError("Output file open error"));
-    while(std::getline(inputFile, line))
-    {
-        replace.setNewLine(line, argv2, argv3);
-        outputFile << replace.getNewLine() << std::endl;
-    }
+    buf = std::string(std::istreambuf_iterator<char>(inputFile),
+                      std::istreambuf_iterator<char>());
+    replace.setNewFile(buf, argv2, argv3);
+    outputFile << replace.getNewFile() << std::endl;
     inputFile.close();
     outputFile.close();
 }
