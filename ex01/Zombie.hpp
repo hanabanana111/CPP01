@@ -19,4 +19,10 @@ class Zombie
         std::string name_;
 };
 
+Zombie* zombieHorde( int N, std::string name );
+void setZombiesName(std::string& name, const std::string& message);
+void setZombiesNumber(std::string& in_n, const std::string& message);
+bool isStringDigits(std::string& str);
+void printErrorExit(std::string& str);
+
 #endif
